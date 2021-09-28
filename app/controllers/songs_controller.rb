@@ -22,6 +22,9 @@ class SongsController < ApplicationController
     end
 
     def destroy
+        song = Song.find_by_id(params[:id]) 
+        song.destroy
+        render json: {message: "#{song.title} has been removed from this list."}
     end
 
     private
