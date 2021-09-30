@@ -1,5 +1,5 @@
 class PlaylistSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :description
+  attributes :title, :description, :id
   has_many :songs
 end
