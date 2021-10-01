@@ -1,6 +1,7 @@
 class SongsController < ApplicationController
     def index
         songs = Song.all 
+        # byebug
         render json: SongSerializer.new(songs)
     end
 

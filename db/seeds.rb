@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Playlist.create(title: "Playlist 1", description: "test playlist description").save
-Playlist.create(title: "Playlist 2", description: "test playlist description 2").save
-Playlist.create(title: "Playlist 3", description: "test playlist description 3").save
+# Playlist.create(title: "Playlist 1", description: "test playlist description").save
+# Playlist.create(title: "Playlist 2", description: "test playlist description 2").save
+# Playlist.create(title: "Playlist 3", description: "test playlist description 3").save
+
+Song.find_or_create_by(title: "crazy song", artist: "katie", playlist_id: 4)
