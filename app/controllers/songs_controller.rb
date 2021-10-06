@@ -2,7 +2,7 @@ class SongsController < ApplicationController
     def index
         songs = Song.all 
         # byebug
-        render json: SongSerializer.new(songs)
+        render json: SongSerializer.new(songs, {include: [:playlist]})
     end
 
     def create
