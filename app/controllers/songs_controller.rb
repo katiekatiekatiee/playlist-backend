@@ -15,6 +15,12 @@ class SongsController < ApplicationController
     end
 
     def update
+        song = Song.find_by_id(params[:id])
+        if song.update(song_params)
+            render json: song
+        else
+            render json: {error: "Could not update song"}
+        end
     end
 
     def show
