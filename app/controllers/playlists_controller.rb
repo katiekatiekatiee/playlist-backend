@@ -11,6 +11,8 @@ class PlaylistsController < ApplicationController
     end
 
     def show
+        playlist = Playlist.find_by_id(params[:id]) 
+        render json: playlist.to_json(except: [:created_at, :updated_at])
     end
 
     def destroy
