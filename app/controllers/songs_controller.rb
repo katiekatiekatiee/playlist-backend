@@ -7,8 +7,10 @@ class SongsController < ApplicationController
     end
 
     def create
+        # byebug
          song = Song.new(song_params)
-         if song.save song
+         if song.save 
+            render json: song
          else
              render json: {error: "Could not add song"}
          end
