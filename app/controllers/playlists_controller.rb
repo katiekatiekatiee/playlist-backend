@@ -1,7 +1,8 @@
 class PlaylistsController < ApplicationController
     def index
         playlists = Playlist.all 
-        render json: PlaylistSerializer.new(playlists)
+        # render json: PlaylistSerializer.new(playlists)
+        render json: playlists.as_json(options)
     end
 
     # def create
@@ -18,7 +19,12 @@ class PlaylistsController < ApplicationController
     # def destroy
     # end
 
-    # private
+    private
+
+    def options
+        {include: {songs: {except: [:created_at, :updated_at]}}, except: [:created_at, :updated_at]}
+    end
+    
     #     def playlist_params
     #         params.require(:playlist).permit(:title, :description)
     #     end
