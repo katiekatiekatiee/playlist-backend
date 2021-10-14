@@ -1,8 +1,8 @@
 # Playlist Hub
 
-Thank you for using Playlist Hub! This single-page application also has a front end linked here: https://github.com/katiekatiekatiee/playlist-frontend.
+Thank you for using Playlist Hub! This single-page application also has a frontend linked here: https://github.com/katiekatiekatiee/playlist-frontend.
 
-Once in the browser, the client is able to view a wide range of playlists and their associated songs that have been added to their list. New songs can be added from right inside the playlist they are being added to, and songs can also be deleted! Playlist, however, are not subject to manipulation by the client. 
+Once in the browser, the client is able to view a wide range of playlists and their associated songs that have been added to their list. New songs can be added from right inside the playlist they are being added to, and songs can also be deleted! Playlists, however, are not subject to manipulation at this time. 
 
 ## Installation
 
